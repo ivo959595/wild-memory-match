@@ -1,13 +1,24 @@
 .card{
     position: relative;
+    cursor: pointer
 }
 
 .card img {
     width: 100%;
     display: block;
-    border: 2px solid white;
+    border: 2px solid  #F96167;
     border-radius: 6px;
+
+    background:  #a0d636;
+    width: 100%; 
+    height: 100%;
 }
+
+
+.card img:hover {
+    border: 2px solid  #CC313D;
+}
+
 
 .card .front{
     transform: rotateY(90deg);
@@ -29,4 +40,15 @@
 .flipped .back {
     transform: rotateY(90deg);
     transition-delay: 0s;
+
+
+
+}@media screen and (max-width: 640px, max-width: 480px,  max-width: 200px) {
+    .card {
+        max-width: 100%; 
+    }
+    .card img {
+        width: 100%; /* Ensure the images fill the width of the card container on smaller screens */
+        height: auto; /* Ensure aspect ratio is maintained */
+    }
 }

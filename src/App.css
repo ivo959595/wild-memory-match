@@ -1,5 +1,16 @@
+body{
+
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  width: 100%; /* Set width to 100% of the viewport width */
+  height: 100%; /* Set height to 100% of the viewport height */
+  overflow: hidden; /* Prevent scrollbars */
+  background: #aeeb34;
+  font-family: Arial, sans-serif;
+}
+
 .App {
-  max-width: 860px;
+  max-width: 680px;
   margin: 40px auto;
 }
 button {
@@ -12,8 +23,9 @@ button {
   cursor: pointer;
   font-size: 1em;
 }
+
 button:hover {
-  background: #c23866;
+  background:#a0d636;
   color: #fff;
 }
 

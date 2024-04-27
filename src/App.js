@@ -2,14 +2,23 @@ import { useEffect, useState } from "react";
 import SingleCard from "./components/SingleCard";
 import "./App.css";
 
+
+import fox from './assets/fox-1.png'
+import pig from './assets/pig-1.png'
+import cow from './assets/cow-1.png'
+import fish from './assets/fish-1.png'
+import cat from './assets/cat-1.png'
+import racoon from './assets/racoon-1.png'
+
 const cardImages = [
-  { src: "/img/helmet-1.png", matched: false },
-  { src: "/img/potion-1.png" , matched: false},
-  { src: "/img/ring-1.png" , matched: false},
-  { src: "/img/scroll-1.png" , matched: false},
-  { src: "/img/shield-1.png", matched: false },
-  { src: "/img/sword-1.png", matched: false },
+  { src: fox, matched: false },
+  { src: pig , matched: false},
+  { src: cow , matched: false},
+  { src: fish, matched: false},
+  { src: cat, matched: false },
+  { src: racoon, matched: false },
 ];
+
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -72,12 +81,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1> Magic game </h1>
+      <h1> Wild Memory Match </h1>
       <button onClick={shuffleCards}>New Gamne</button>
 
       <div className="card-grid">
         {cards.map(card => (
           <SingleCard 
+
           handleaChoise ={handleaChoise}
           key={card.id} 
           card={card}
@@ -88,7 +98,7 @@ function App() {
         ))}
         
       </div>
-      <p> Turns: {turns}</p>
+      <p> Turns: {turns} </p>
     </div>
   );
 }

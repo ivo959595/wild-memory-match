@@ -1,6 +1,8 @@
 import React from "react";
 import "./SingleCard.css";
 
+import cover from '../assets/cover.png'
+
 function SingleCard({card, handleaChoise, flipped, disabled}) {
 
     const handleClick = () =>{
@@ -17,7 +19,7 @@ function SingleCard({card, handleaChoise, flipped, disabled}) {
         <img className= "front" src={card.src} alt="card-front" />
         <img 
         onClick={handleClick}
-        className="back" src="/img/cover.png" alt="back" />
+        className="back" src={cover} alt="back" />
       </div>
     </div>
   );
